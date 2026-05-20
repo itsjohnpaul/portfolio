@@ -6,38 +6,37 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer"; // Imported the new Footer component
 import ThemeToggle from "./components/ThemeToggle";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={darkMode ? "dark overflow-x-hidden" : "overflow-x-hidden"}>
       <Navbar />
-            {/* <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+      {/* <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> */}
 
+      {/* Main Portfolio Sections */}
       <Profile />
       <About />
-      <div className="w-full h-8 bg-[#23288a] flex items-center justify-center">
-  <div className="w-full h-6 bg-gray-200" />
-</div>
+      
+      {/* Refined section spacing matching your color codes seamlessly */}
+      <div className="w-full h-1 bg-[#23288a] opacity-20" />
 
       <Skills />
-      <div className="w-full h-8 bg-[#23288a] flex items-center justify-center">
-  <div className="w-full h-6 bg-gray-200" />
-</div>
+      <div className="w-full h-1 bg-[#23288a] opacity-20" />
 
       <Projects />
-      <div className="w-full h-8 bg-[#23288a] flex items-center justify-center">
-  <div className="w-full h-6 bg-gray-200" />
-</div>
+      <div className="w-full h-1 bg-[#23288a] opacity-20" />
 
       <Certifications />
-      <div className="w-full h-8 bg-[#23288a] flex items-center justify-center">
-  <div className="w-full h-6 bg-gray-200" />
-</div>
+      <div className="w-full h-1 bg-[#23288a] opacity-20" />
 
       <Contact />
+      
+      {/* Footer Element Anchor */}
+      <Footer />
     </div>
   );
 }
