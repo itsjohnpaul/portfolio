@@ -35,9 +35,11 @@ const internships = [
 ];
 
 const certifications = [
-  { name: "React - The Complete Guide", issuer: "Udemy" },
-  { name: "Advanced CSS and Sass", issuer: "Udemy" },
-  { name: "JavaScript Algorithms", issuer: "freeCodeCamp" },
+  { name: "Java Foundations", issuer: "Oracle" },
+  { name: "Python Core Concepts", issuer: "Infosys Springboard" },
+  { name: "SQL and Databases", issuer: "IBM" },
+  { name: "Programming in Java", issuer: "NPTEL" },
+  { name: "C, Java & Python Programming", issuer: "Skillrack" },
 ];
 
 export default function ExperienceAndCredentials() {
@@ -46,14 +48,14 @@ export default function ExperienceAndCredentials() {
       id="certifications"
       className="snap-start min-h-screen px-4 sm:px-6 py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-cyan-600 text-white flex flex-col justify-center items-center"
     >
-      {/* Title Layout Section — Synced precisely with your global theme architecture */}
-     <div className="w-full flex flex-col items-center mb-12 md:mb-16 group cursor-pointer select-none px-4">
-  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-normal mb-2 relative inline-block text-center">
-    <span>Internship and Certifications</span>
-    {/* Responsive Underline Animation */}
-    <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 sm:mt-4 h-1 bg-blue-400 rounded transition-all duration-300 ease-in-out w-0 group-hover:w-36 sm:group-hover:w-44 md:group-hover:w-56" />
-  </h2>
-</div>
+      {/* Title Layout Section */}
+      <div className="w-full flex flex-col items-center mb-12 md:mb-16 group cursor-pointer select-none px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-normal mb-2 relative inline-block text-center">
+          <span>Internship and Certifications</span>
+          {/* Responsive Underline Animation */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 sm:mt-4 h-1 bg-blue-400 rounded transition-all duration-300 ease-in-out w-0 group-hover:w-36 sm:group-hover:w-44 md:group-hover:w-56" />
+        </h2>
+      </div>
 
       {/* Main Combined Grid Block layout */}
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start px-2">
@@ -103,13 +105,14 @@ export default function ExperienceAndCredentials() {
           ))}
         </div>
 
-        {/* Right Section: Certifications Block Grid Layout (Spans 5 columns) */}
+        {/* Right Section: Certifications Block Scrollable Layout (Spans 5 columns) */}
         <div className="lg:col-span-5 space-y-6">
           <h3 className="text-sm font-bold uppercase tracking-widest text-blue-300 pl-1">
             Verified Certifications
           </h3>
 
-          <div className="flex flex-col gap-4">
+          {/* Added a max-height and hidden webkit scrollbar to keep layout compact and balanced with left timeline */}
+          <div className="flex flex-col gap-4 max-h-[75vh] overflow-y-auto pr-1 scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             {certifications.map(({ name, issuer }) => (
               <div
                 key={name}
