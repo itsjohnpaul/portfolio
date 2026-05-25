@@ -129,7 +129,7 @@ export default function Profile() {
           
           {/* Formatted link safely targeted to view in browser window instead of initiating download */}
           <a
-            href="/Resume I.pdf"
+            href="/resumejohnpaul31.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-blue-700 text-blue-700 px-6 py-3 rounded font-semibold hover:bg-blue-700 hover:text-white transition inline-flex items-center justify-center cursor-pointer"
