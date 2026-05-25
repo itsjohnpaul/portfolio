@@ -120,18 +120,19 @@ export default function Profile() {
 
         {/* Action Buttons */}
         <div className="w-full flex flex-row justify-center items-center gap-4 mb-8">
-          <button
+          <button 
             onClick={handleScrollDown}
-            className="bg-blue-700 text-white px-5 sm:px-6 py-3 rounded font-semibold shadow hover:bg-blue-800 transition cursor-pointer text-sm sm:text-base"
+            className="bg-blue-700 text-white px-6 py-3 rounded font-semibold shadow hover:bg-blue-800 transition cursor-pointer"
           >
             VIEW ME
           </button>
-
+          
+          {/* Formatted link safely targeted to view in browser window instead of initiating download */}
           <a
-            href="/JohnPaul_Resume.pdf"
+            href="/Resume I.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-blue-700 text-blue-700 px-5 sm:px-6 py-3 rounded font-semibold hover:bg-blue-700 hover:text-white transition inline-flex items-center justify-center cursor-pointer text-sm sm:text-base"
+            className="border-2 border-blue-700 text-blue-700 px-6 py-3 rounded font-semibold hover:bg-blue-700 hover:text-white transition inline-flex items-center justify-center cursor-pointer"
           >
             RESUME
           </a>
